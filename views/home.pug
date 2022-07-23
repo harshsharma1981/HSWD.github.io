@@ -1,0 +1,36 @@
+extends base.pug
+
+block scripts
+  script(src='../static/index.js')
+
+block style 
+    style
+      include ../static/style.css
+
+block content
+    .body
+      section#intro 
+        img(src="../static/img/intro1.png", alt="img")
+        //- h2(class="intro") Welcome to Hitm Gaming
+        h3(class="intro") Welcome To HSWD Gaming
+      section#gamesection
+        h3(class="gamesectionh3") Recent Games & App
+      
+        .recentgame
+          a(href="https://harshsharma1981.github.io/1981snake.github.io/")
+            img(src="static/img/logo1.PNG", alt="logo")
+            h3 1981 Snake Game 
+        .recentgame     
+          a(href="/")
+            img(src="https://img.freepik.com/free-vector/coming-soon-banner-with-focus-lights_1017-33739.jpg?t=st=1658578214~exp=1658578814~hmac=f80c169890fb66f3c6e1ec9c76e554fa70055559c6073cb14fe5665dcebf2c49&w=740", alt="comming soon") 
+            h3 comming soon... 
+        .recentgame       
+          a(href="/snakegame")
+            img(src="https://img.freepik.com/free-vector/coming-soon-banner-with-focus-lights_1017-33739.jpg?t=st=1658578214~exp=1658578814~hmac=f80c169890fb66f3c6e1ec9c76e554fa70055559c6073cb14fe5665dcebf2c49&w=740", alt="comming soon")  
+            h3 comming soon...
+        .recentgame      
+          a(href="/snakegame")
+            img(src="https://img.freepik.com/free-vector/coming-soon-banner-with-focus-lights_1017-33739.jpg?t=st=1658578214~exp=1658578814~hmac=f80c169890fb66f3c6e1ec9c76e554fa70055559c6073cb14fe5665dcebf2c49&w=740", alt="")
+            h3 comming soon...
+    //- section#explore 
+    //-   | about 

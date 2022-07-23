@@ -1,0 +1,33 @@
+//- layout pug
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title HSWD gaming
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+    block style 
+    block scripts
+      script(src='../static/index.js')
+  body
+    nav#navbar
+     
+      div.img 
+          a(href="/") 
+            img(src="../static/img/icon.png", alt="logo")
+            h3 HSWD
+      ul#mylinks
+        li #[a(href="/") Home]
+        li #[a(href="/game") Game]
+        li #[a(href="/app") App ]
+        li #[a(href="/about") About]
+        li #[a(href="/helpfeedback") Feedback]
+      a(href="javascript:void(0);" class="icon" onclick="myFunction()")
+        i(class="fa fa-bars")
+ 
+    block content
+    block gamecontent
+    footer#footer 
+        | HSWDGaming.com © 2022. All Rights Reserved.       
+    
