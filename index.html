@@ -8,62 +8,7 @@
     <link rel="stylesheet" type="text/css" href="static/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <script src="static/index.js"></script>
-    <script>const express = require('express');
- const app = express();
- const path = require('path');
- const bodyParser = require("body-parser")
- const mongoose = require('mongoose');
- main().catch(err => console.log(err));
- async function main() {
-   await mongoose.connect('mongodb://localhost:27017/help&feedback');
- }
- //define mongoose schema
- const helpfeedbackSchema = new mongoose.Schema({
-     name: String,
-     email: String,
-     feedback: String,
-   });
-
- const helpfeedback = mongoose.model('helpfeedback', helpfeedbackSchema);
-
- app.post('/helpfeedback', (req, res)=>{
-    var mydata = new helpfeedback(req.body);
-    mydata.save().then(()=>{
-     res.send("thanks for your feedback");
-    }).catch(()=>{
-     res.statusCode(404).send("item was not saved")
-    })
-     //  res.status(200).render('help&feedback.pug' );
- }) 
-
-
-
-const port = 8000;
-app.use(express.static('static'));
-app.use('/static', express.static('static'));
-
-
-app.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname, 'index.html'));
-});
-app.get('/game', function(req, res) {
-  res.sendFile(path.join(__dirname, 'views/game.html'));
-});
-app.get('/helpfeedback', function(req, res) {
-  res.sendFile(path.join(__dirname, 'views/helpfeedback.html'));
-});
-app.get('/app', function(req, res) {
-  res.sendFile(path.join(__dirname, 'views/app.html'));
-});
-app.get('/about', function(req, res) {
-  res.sendFile(path.join(__dirname, 'views/about.html'));
-});
-
-
-
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})</script>
+   
    
   </head>
   <body>
@@ -71,11 +16,11 @@ app.listen(port, () => {
       <div class="img"> <a href="/"> <img src="static/img/icon.png" alt="logo"/>
           <h3>HSWD</h3></a></div>
       <ul id="mylinks">
-        <li><a href="/">Home</a></li>
-        <li><a href="/game">Game</a></li>
-        <li><a href="/app">App </a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/helpfeedback">Feedback</a></li>
+      <li><a href="https://harshsharma1981.github.io/HSWD.github.io/">Home</a></li>
+        <li><a href="https://harshsharma1981.github.io/HSWD-game/">Game</a></li>
+        <li><a href="https://harshsharma1981.github.io/HSWD-app/">App </a></li>
+        <li><a href="https://harshsharma1981.github.io/HSWD-about/">About</a></li>
+        <li><a href="https://harshsharma1981.github.io/HSWD-helpandfeedback/">Feedback</a></li>
       </ul><a class="icon" href="javascript:void(0);" onclick="myFunction()"><i class="fa fa-bars"></i></a>
     </nav>
     <div class="body">
