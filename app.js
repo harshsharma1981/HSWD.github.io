@@ -34,7 +34,7 @@ app.use('/static', express.static('static'));
 
 
 app.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(path.join(__dirname, '/index.html'));
 });
 app.get('/game', function(req, res) {
   res.sendFile(path.join(__dirname, 'views/game.html'));
